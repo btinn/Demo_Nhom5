@@ -1,0 +1,13 @@
+﻿@using Buoi9.Models;
+@model List<NhaXuatBan>
+
+<div>
+       @foreach(var item in Model)
+       {
+           <p class="list-group-item">
+                @*<a href="#" style="text-transform:uppercase; text-decoration:none;">@item.TenNXB </a>*@
+               <a>@Html.ActionLink(item.TenNXB, "SachTheoNXB", new { id = item.MaNXB }, new { style = "text-transform:uppercase; text-decoration:none;" })</a>
+
+           </p>
+       }
+</div>
